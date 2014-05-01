@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NetwokrScripts\UDPReceive.cs">
+    <Files>
+      <File FileName="Assets\NetwokrScripts\UDPSend.cs" Line="61" Column="14" />
+      <File FileName="Assets\NetwokrScripts\UDPReceive.cs" Line="127" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
