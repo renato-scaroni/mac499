@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Renato Scaroni - TCC</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div class="header">
+		<div>
+			<ul>
+				<li class="selected">
+					<a href="index.html"><span>P</span>roposta</a>
+				</li>
+				<li>
+					<a href="https://bitbucket.org/scaroni/mac499-tcc"><span>R</span>epositório</a>
+				</li>
+			</ul>
+			<div>
+				<p>
+					<span>T</span>rabalho de formatura supervisionado - MAC0499
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div>
+			<div>
+				<div>
+					<div>
+						<div class="section">
+							<h2>Implementação de um módulo de rede P2P em C# para Unity 3D</h2>
+							<p>
+								<b>Resumo:</b>
+								<br>
+								<br>
+								Quando se pensa em arquitetura de redes para jogos
+								em geral considera-se a estrutura de cliente-servidor, 
+								por funcionar melhor quando se trata de uma jogo via 
+								internet e facilitar o suporte a mais jogadores conectados,
+								uma vez que uma máquina da rede alocará recursos apenas para
+								cuidar de dados comuns a todos os jogadores. Porém exige que
+								uma máquina disponibilize recursos para esse fim, o que para o
+								jogador representa uma preucupação desnecessária. Para eliminar
+								essa preucupação do lado jogador muitas vezes implementa-se 
+								uma solução Peer-to-peer na qual todo jogador representa cliente
+								e servidor, ou seja, todo jogador guardar informações próprias e
+								também dos demais. Nesse trabalho pretendo propor uma solução P2P
+								e implementar um módulo em C#/Mono para uso com a popular engine
+								Unity 3D, uma vez que o módulo de rede implementado na mesma não
+								apresenta suporte a uma solução P2P.
+								<br>
+								<br>
+
+							</p>
+							<p>
+
+								<b>Objetivos:</b>
+								<br>
+								<br>
+								<img src="images/arrow.png" style="width: 5%; height: 7%" alt="arrow"> Desenvolvimento de um protocolo de rede que
+								utilize a idéia de uma rede P2P para jogo multijogador 
+								<br><img src="images/arrow.png" style="width: 3%; height: 5%" alt="arrow"> Definir como os jogadores se descobrirão
+								uns aos outros
+								<br><img src="images/arrow.png" style="width: 3%; height: 5%" alt="arrow"> Definir o que configura o estado de um jogador 
+								(quantas vidas tem ou  quantos pontos fez ou posição na tela, etc) e como guardá-lo, bem como outras informações dos host
+								que o jogador está usando.
+								<br><img src="images/arrow.png" style="width: 3%; height: 5%" alt="arrow"> Definir como os jogadores poderão saber se um usuário
+								não está mais conectado à rede.
+								<br><img src="images/arrow.png" style="width: 3%; height: 5%" alt="arrow"> Possibilitar ao usuário jogar partidas com um conjunto
+								determinado de jogadores conectados à rede.
+								<br><img src="images/arrow.png" style="width: 5%; height: 7%" alt="arrow"> Desenvolvimento de uma aplicação teste que utilize
+								o módulo em questão. A idéia inicial é um jogo de nave onde todos os jogadores estarão jogando de forma cooperativa contra 
+								inimigos controlados pelo PC que aparecerão na tela, estilo space invaders. Essa idéia utilizará como base um jogo que fiz nas
+								minhas horas vagas no ano passado.
+
+								<br>
+								<br>
+							</p>
+							<p>
+								<b>Trabalho já realizado:</b>
+								<br>
+								<br>
+								<img src="images/arrow.png" style="width: 5%; height: 7%" alt="arrow"> Pequenos teste e implementação de módulos de rede que abrem
+								simples conexões para troca de informação entre duas máquinas numa mesma rede local dado um IP setado pelo usuário, tanto em UDP 
+								quanto em TCP.
+								<br><img src="images/arrow.png" style="width: 5%; height: 7%" alt="arrow"> Definição de uma estrutura básica do protocolo (disponível <a href="files/ResumoEstudosTCC.pdf">neste documento</a>, na seção 3  )
+								<br>
+								<br>
+							</p>
+							<p>
+								<b>Cronograma:</b>
+								<br>
+								<br>
+
+					            <table border="1">
+
+					              <thead>
+
+					                <tr><th>Atividade</th>
+					                <th>Mar</th><th>Abr</th><th>Mai</th><th>Jun</th><th>Jul</th><th>Ago</th><th>Set</th><th>Out</th><th>Nov</th><th>Dez</th></tr>
+
+					              </thead>
+					              <tbody>
+
+         							<!-- bgcolor="#0F0F0F">
+         							Tabela facil de mudar =)  
+         							<tr><td>Estudo sobre C#/Mono e comunicação de rede</td>
+					                <td> * </td><td> * </td><td> * </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Estudo sobre redes P2P em jogos</td>
+					                <td>   </td><td> * </td><td> * </td><td> * </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Desenvolvimento do protocolo</td>
+					                <td>   </td><td>   </td><td> * </td><td> * </td><td> * </td><td> * </td><td> * </td><td>   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Implementação do protocolo</td>
+					                <td>   </td><td>   </td><td>   </td><td> * </td><td> * </td><td> * </td><td> * </td><td> * </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Implementação da aplicação de teste</td>
+					                <td>   </td><td>   </td><td>   </td><td>   </td><td> * </td><td> * </td><td> * </td><td> * </td><td> * </td><td>   </td></tr>
+					                
+					                <tr><td>Monografia e apresentação</td>
+					                <td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td> * </td><td> * </td><td> * </td></tr>
+									-->
+
+					                <tr><td>Estudo sobre C#/Mono e comunicação de rede</td>
+					                <td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Estudo sobre redes P2P em jogos</td>
+					                <td>   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Desenvolvimento do protocolo</td>
+					                <td>   </td><td>   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td>   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Implementação do protocolo</td>
+					                <td>   </td><td>   </td><td>   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td>   </td><td>   </td></tr>
+
+					                <tr><td>Implementação da aplicação de teste</td>
+					                <td>   </td><td>   </td><td>   </td><td>   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td>   </td></tr>
+					                
+					                <tr><td>Monografia e apresentação</td>
+					                <td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td>   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td><td bgcolor="#0F0F0F">   </td></tr>
+
+					              </tbody>
+
+					            </table>
+								<br>
+								<br>
+							</p>
+						</div>
+						<div>
+							<h3>Responsáveis pelo projeto</h3>
+							<ul>
+								<li>
+									<div>
+										<span>Aluno</span>
+
+										<p>
+											<a href="http://www.linux.ime.usp.br/~scaroni">Renato Scaroni</a>
+										</p>
+									</div>
+								</li>
+								<li class="last">
+									<div>
+										<span>Orientador</span>
+										<p>
+											<a href="http://www.ime.usp.br/~batista">Daniel Batista</a>
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	<div class="footer">
+		<div>
+			<div>
+				<h3>NEWSLETTER</h3>
+				<p>
+					Nulla porttitor vulputate elit, trist ique malesuada sem.
+				</p>
+				<form action="index.html">
+					<input type="text" value="Email Address" onblur="this.value=!this.value?'Email Address':this.value;" onfocus="this.select()" onclick="this.value='';">
+					<input type="submit" value="Get">
+				</form>
+			</div>
+			<div>
+			</div>
+			<div class="connect">
+				<h4>FOLLOW US:</h4>
+				<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">Facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">Twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" class="google">Google+</a>
+			</div>
+		</div>
+		<div>
+			<p>
+				Template from www.freewebtemplates.com
+			</p>
+		</div>
+	</div>
+</body>
+</html>
