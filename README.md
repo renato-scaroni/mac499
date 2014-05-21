@@ -12,5 +12,8 @@ dos relat√≥rios e do site oficial.
 Link para site oficial do projeto:
 https://linux.ime.usp.br/~scaroni/mac499/
 
+Link para o c√digo latex das especifica√√es do protocolo (n√o finalizado):
+https://www.sharelatex.com/project/537a5ca3c702de7954172434?r=0a885407&rs=ps&rm=d
+
 Link para o c√≥digo em Latex do √∫ltimo relat√≥rio:
 https://www.sharelatex.com/project/534d172332ed2b25466b2442?r=0a885407&rs=ps&rm=d
