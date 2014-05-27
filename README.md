@@ -17,6 +17,3 @@ https://www.sharelatex.com/project/537a5ca3c702de7954172434?r=0a885407&rs=ps&rm=
 
 Link para o código em Latex do último relatório:
 https://www.sharelatex.com/project/534d172332ed2b25466b2442?r=0a885407&rs=ps&rm=d
-
-# Descrição:
-Um projeto pessoal escrito por Renato Scaroni.
