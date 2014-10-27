@@ -1,0 +1,324 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Vector",
+				"Vector3	x, y, z"
+			],
+			[
+				"amoun",
+				"amountToMove"
+			],
+			[
+				"new",
+				"newEnemy"
+			],
+			[
+				"pla",
+				"player"
+			],
+			[
+				"Ran",
+				"Random"
+			],
+			[
+				"for",
+				"forward"
+			],
+			[
+				"Rotat",
+				"RotateAround	point, axis, angle"
+			],
+			[
+				"sp",
+				"playerSpeed"
+			],
+			[
+				"init",
+				"initRotation"
+			],
+			[
+				"Bro",
+				"broadcastIPs"
+			],
+			[
+				"IPADR",
+				"IPAddress"
+			],
+			[
+				"Li",
+				"List"
+			],
+			[
+				"broa",
+				"broadcastIP"
+			],
+			[
+				"broadcastI",
+				"broadcastIPs"
+			],
+			[
+				"IPA",
+				"IPAddress"
+			],
+			[
+				"to",
+				"ToString"
+			],
+			[
+				"lo",
+				"Log"
+			],
+			[
+				"debu",
+				"Debug"
+			],
+			[
+				"coun",
+				"countDieTotal"
+			],
+			[
+				"di",
+				"dist"
+			],
+			[
+				"Pro",
+				"projectile"
+			],
+			[
+				"Get",
+				"GetComponent	type"
+			],
+			[
+				"In",
+				"Input"
+			],
+			[
+				"Ro",
+				"Rotate	axis, angle"
+			],
+			[
+				"GetA",
+				"GetAxis"
+			],
+			[
+				"Vect",
+				"Vector3	x, y, z"
+			],
+			[
+				"Trans",
+				"TransformPoint	x, y, z"
+			],
+			[
+				"Transform",
+				"TransformPoint	position"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"unit",
+				"Unity Reference: Open Function Reference"
+			],
+			[
+				"unity",
+				"Unity Reference: Search Selection"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"run",
+				"PythonTestRunner: Run test"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 600.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Renato/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Renato/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/P2PNetworking.cs.meta",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/tcc.sublime-project",
+		"/C/Users/Renato/Documents/2d space invaders/Assets/Scripts/EnemyController.cs",
+		"/C/Users/Renato/Documents/2d space invaders/Assets/Scripts/Player.cs",
+		"/C/Users/Renato/Documents/2d space invaders/Assets/Scripts/Enemy.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/BroadCastUDP.cs",
+		"/C/Users/Renato/Documents/2d space invaders/Assets/Scripts/Projectile.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/P2PNetworking.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/ExampleClass.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/UDPReceive.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/TCPSend.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/TCPReceive.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/BroadtestUDP.cs",
+		"/C/Users/Renato/Documents/NewSuperPanda/Assets/Scripts/ProjectileBehaviour.cs",
+		"/C/Users/Renato/Documents/NewSuperPanda/Assets/Scripts/EnemyBehaviour.cs",
+		"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/UDPSend.cs",
+		"/C/Users/Renato/Documents/NewSuperPanda/Assets/Scripts/PandaBehaviour.cs",
+		"/C/Users/Renato/Documents/deborahgame/deborahgame/Assets/MiniGames/Florenza/Scripts/NPCs/DialogoMissao.cs",
+		"/C/Users/Renato/Documents/deborahgame/deborahgame/Assets/MiniGames/Florenza/Scripts/Jogador/Movimentacao1.cs",
+		"/C/Users/Renato/Documents/deborahgame/deborahgame/Assets/MiniGames/Florenza/Scripts/NPCs/NPCAuxiliar.cs",
+		"/C/Users/Renato/Documents/Python/pythonTeste.py",
+		"/C/Users/Renato/Documents/AutoBuilder.cs",
+		"/C/Users/Renato/Documents/deborahgame/Assets/MiniGames/Florenza/Scripts/Jogador/Movimentacao1.cs",
+		"/C/Users/Renato/AppData/Roaming/Sublime Text 2/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"amountToMove",
+			"playerSpeed",
+			"debugMode",
+			"debug",
+			"broadcastIPs",
+			"remoteEndPoint",
+			"DisplayDirectedBroadcastAddresses",
+			"client",
+			"		Debug.Log(\"Cacetada\");\n",
+			"Dead",
+			"abs",
+			"lesteOeste",
+			"projectile",
+			"Scale"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/Users/Renato/Documents/IME-USP/TCC/mac499/P2PNetwork/Assets/NetworkScripts/tcc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 190.0,
+	"status_bar_visible": true
+}

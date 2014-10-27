@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\deborahgame\deborahgame\Assets\MiniGames\Florenza\Scripts\lixo\Introducao.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NetworkScripts\P2PNetworking.cs">
     <Files>
-      <File FileName="..\..\..\..\deborahgame\deborahgame\Assets\MiniGames\Florenza\Scripts\lixo\Introducao.cs" Line="71" Column="3" />
+      <File FileName="Assets\NetworkScripts\P2PNetworking.cs" Line="263" Column="6" />
+      <File FileName="Assets\NetworkScripts\UDPListener.cs" Line="2" Column="1" />
+      <File FileName="Assets\NetworkScripts\KnownHost.cs" Line="27" Column="16" />
+      <File FileName="Assets\NetworkScripts\UDPSendChannel.cs" Line="50" Column="24" />
+      <File FileName="Assets\NetworkScripts\UDPReceiveManager.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\Renato\Documents\IME-USP\TCC\mac499\P2PNetwork\Assets\NetworkScripts\UDPBroadCast.cs" Line="108" Column="1" />
+      <File FileName="Assets\NetworkScripts\InterfacesManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
