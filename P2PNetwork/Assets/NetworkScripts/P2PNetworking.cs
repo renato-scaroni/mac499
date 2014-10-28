@@ -214,7 +214,7 @@ public class P2PNetworking : MonoBehaviour
 	int InitModeUpdate ()
 	{
 		int count = 0;
-		foreach(KnownHost kh in knownHosts)
+		foreach(KnownHost kh in knownHosts.Values)
 		{
 			if(kh.alive)
 			{
