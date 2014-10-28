@@ -56,7 +56,8 @@ public class P2PNetworking : MonoBehaviour
 			{
 				lastUsedPort ++;
 				UDPReceiveManager.StartListener (lastUsedPort, IPAddress.Parse(kh.ip));
-				UDPBroadCast.instance.SendString("Connecting\t"+kh.ip+"\t"+lastUsedPort);
+				for (int i = 0; i < 10; i++)
+					UDPBroadCast.instance.SendString("Connecting\t"+kh.ip+"\t"+lastUsedPort);
 			}
 		}
 	}

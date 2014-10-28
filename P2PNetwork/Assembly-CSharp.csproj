@@ -46,18 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\NetworkScripts\BroadCastUDP.cs" />
+     <Compile Include="Assets\NetworkScripts\InterfacesManager.cs" />
+     <Compile Include="Assets\NetworkScripts\KnownHost.cs" />
      <Compile Include="Assets\NetworkScripts\P2PNetworking.cs" />
+     <Compile Include="Assets\NetworkScripts\PluginTest.cs" />
+     <Compile Include="Assets\NetworkScripts\ReceiveTest.cs" />
      <Compile Include="Assets\NetworkScripts\TCPReceive.cs" />
      <Compile Include="Assets\NetworkScripts\TCPSend.cs" />
-     <Compile Include="Assets\NetworkScripts\UDPReceive.cs" />
-     <Compile Include="Assets\NetworkScripts\UDPSend.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{C19AFCD7-50DE-1F79-5598-3689F1A443D0}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{3279A99F-F3C3-3A96-3958-9E9E75D3DB5F}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+     <Compile Include="Assets\NetworkScripts\UDPBroadCast.cs" />
+     <Compile Include="Assets\NetworkScripts\UDPListener.cs" />
+     <Compile Include="Assets\NetworkScripts\UDPReceiveManager.cs" />
+     <Compile Include="Assets\NetworkScripts\UDPSendChannel.cs" />
+     <None Include="Assets\NetworkScripts\README_PT.txt" />
+     <None Include="Assets\NetworkScripts\README_EN.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
