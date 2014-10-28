@@ -21,40 +21,52 @@ using System.Threading;
 /* Developed by Renato Scaroni                                           */
 /*************************************************************************/
 
-public class UDPSendChannel : MonoBehaviour
+public class UDPSendChannel
 {
 
 	private static int localPort;
 
 	IPEndPoint remoteEndPoint;
-	UdpClient client;
+	UdpClient _client;
+	public UdpClient client
+	{
+		get
+		{
+			return _client;
+		}
+	}
+
+	public UDPSendChannel (string ip, int port)
+	{
+		_ip = ip;
+		_port = port;
+		InitChannel ();
+	}
 
 	// init
-	public UDPSendChannel InitChannel(string ip, int port)
+	void InitChannel()
 	{
-		remoteEndPoint = new IPEndPoint(IPAddress.Parse(ip), port);
-		client = new UdpClient();
-
-		return this;
+		remoteEndPoint = new IPEndPoint(IPAddress.Parse(_ip), _port);
+		_client = new UdpClient();
 	}
 
 	// sendData
-	private void sendString(string message)
+	public void sendString(string message)
 	{
 		try
 		{
 			byte[] data = Encoding.UTF8.GetBytes(message);
-			client.Send(data, data.Length, remoteEndPoint);
+			_client.Send(data, data.Length, remoteEndPoint);
 		}
 		catch (Exception err)
 		{
-			print(err.ToString());
+			Debug.Log(err.ToString());
 		}
 	}
 
 	// OnGUI
-	private string IP;  // define in init
-	private int port;  // define in init
+	private string _ip;  // define in init
+	private int _port;  // define in init
 	private bool sendMode = false;
 	public bool debugMode = false;
 	private string IPInput = "";
@@ -93,7 +105,7 @@ public class UDPSendChannel : MonoBehaviour
 			IPInput = GUI.TextField(new Rect(100,430,140,20),IPInput);
 			if(IPInput != "")
 			{
-				IP = IPInput;
+				_ip = IPInput;
 			}
 			
 			Rect rectPort=new Rect(40,450,200,400);
@@ -102,14 +114,14 @@ public class UDPSendChannel : MonoBehaviour
 			portInput = GUI.TextField(new Rect(100,450,140,20),portInput);
 			if(portInput != "")
 			{
-				port = Convert.ToInt32(portInput);	
+				_port = Convert.ToInt32(portInput);	
 			}
 			
 			if (GUI.Button(new Rect(250,430,40,20),"send"))
 			{
 				if((portInput != "") && (IPInput != ""))
 				{
-					InitChannel (IP, port);
+					InitChannel ();
 					sendMode = true;
 				}
 				else

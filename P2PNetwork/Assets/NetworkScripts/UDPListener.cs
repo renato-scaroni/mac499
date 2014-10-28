@@ -3,6 +3,7 @@ using System.Collections;
 
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
 
 public class UDPListener
 {
@@ -34,13 +35,20 @@ public class UDPListener
 		get {return _allReceivedUDPPackets;}
 		set {_allReceivedUDPPackets = value;}
 	}
-	
-	private double _timeToWait;
-	public double timeToWait
+
+	private Mutex _mutex;
+	public Mutex mutex
 	{
-		get {return _timeToWait;}
-		set {_timeToWait = value;}
+		get {return _mutex;}
+		set {_mutex = value;}
 	}
+
+//	private double _timeToWait;
+//	public double timeToWait
+//	{
+//		get {return _timeToWait;}
+//		set {_timeToWait = value;}
+//	}
 	
 	private IPAddress _ip;
 	public IPAddress ip
@@ -59,40 +67,46 @@ public class UDPListener
 	public bool isBroadcastListener = false;
 
 	public bool receivedMsg;
-	
-	private const double defaultTimeOut = 15000;
-	
-	public UDPListener (int portToListen, double time)
+
+	private string _boundIP = "";
+	public string boundIP
 	{
-		_port = portToListen; 
-		_endPoint = new IPEndPoint(IPAddress.Any, portToListen);
-		_client = new UdpClient(_endPoint);  
-		_timeToWait = time;
-		isBroadcastListener = true;
+		get
+		{
+			return _boundIP;
+		}
 	}
-	
-	public UDPListener (int portToListen, IPAddress ip, double time)
+
+
+//	private const double defaultTimeOut = 15000;
+
+	//Contructs an listener to wait for specifc ip
+	public UDPListener (IPAddress ip)
 	{
-		_port = portToListen;
-		_endPoint = new IPEndPoint(ip, portToListen);
-		_client = new UdpClient(_endPoint);  
-		_timeToWait = time;
+//		_endPoint = new IPEndPoint(ip, 0);
+		_client = new UdpClient (0);
+		_boundIP = ip.ToString ();
+//		_client.Client.so
+		_port = ((IPEndPoint)_client.Client.LocalEndPoint).Port;
+		//		_timeToWait = defaultTimeOut;
 	}
-	
+
+	//Contructs an listener to wait for specifc ip
 	public UDPListener (int portToListen, IPAddress ip)
 	{
 		_port = portToListen;
 		_endPoint = new IPEndPoint(ip, portToListen);
 		_client = new UdpClient(_endPoint);  
-		_timeToWait = defaultTimeOut;
+//		_timeToWait = defaultTimeOut;
 	}
-	
+
+	//constructs broadcast listener
 	public UDPListener (int portToListen)
 	{
 		_port = portToListen;
 		_endPoint = new IPEndPoint(IPAddress.Any, portToListen);
 		_client = new UdpClient(_endPoint);  
-		_timeToWait = defaultTimeOut;
+//		_timeToWait = defaultTimeOut;
 		isBroadcastListener = true;
 	}
 	

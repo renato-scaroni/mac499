@@ -49,10 +49,10 @@
      <Compile Include="Assets\NetworkScripts\InterfacesManager.cs" />
      <Compile Include="Assets\NetworkScripts\KnownHost.cs" />
      <Compile Include="Assets\NetworkScripts\P2PNetworking.cs" />
-     <Compile Include="Assets\NetworkScripts\PluginTest.cs" />
      <Compile Include="Assets\NetworkScripts\ReceiveTest.cs" />
      <Compile Include="Assets\NetworkScripts\TCPReceive.cs" />
      <Compile Include="Assets\NetworkScripts\TCPSend.cs" />
+     <Compile Include="Assets\NetworkScripts\TestApp.cs" />
      <Compile Include="Assets\NetworkScripts\UDPBroadCast.cs" />
      <Compile Include="Assets\NetworkScripts\UDPListener.cs" />
      <Compile Include="Assets\NetworkScripts\UDPReceiveManager.cs" />

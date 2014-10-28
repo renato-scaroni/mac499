@@ -13,7 +13,7 @@ using System.Collections.Generic;
 /* Developed by Renato Scaroni                                           */
 /*************************************************************************/
 
-public class InterfacesManager : MonoBehaviour 
+public class InterfacesManager 
 {
 	private static List<NetworkConection> _interfaces;
 	public static List<NetworkConection> interfaces

@@ -13,7 +13,7 @@ using System.Threading;
 /* Developed by Renato Scaroni                                           */
 /*************************************************************************/
 
-public class UDPReceiveManager : MonoBehaviour
+public class UDPReceiveManager
 {
 	static List<Thread> receiveThreads;
 
@@ -22,11 +22,9 @@ public class UDPReceiveManager : MonoBehaviour
 	
 	private static bool keepListening = true;
 	
-	public delegate void OnUDPMessageReceived (UDPListener listener);
+	public delegate void OnUDPMessageReceived (string msgReceived);
 	public static event OnUDPMessageReceived UDPMessageReceived;
-
-	public static Mutex mutex = new Mutex();
-
+	
 /*********************************************************************************/
 // Access Methods
 
@@ -55,9 +53,34 @@ public class UDPReceiveManager : MonoBehaviour
 /*********************************************************************************/
 // Listener thread init and management functions
 
+	//returns the port which it used
+	public static int StartListener(IPAddress ip)
+	{
+		//Debug.Log("UDPReceiveManager.StartListener()");
+		
+		if(listeners == null)
+			listeners = new Dictionary<int, UDPListener> ();
+		
+		UDPListener newListener = new UDPListener (ip);
+		int port = newListener.port;
+		listeners.Add (port, newListener);
+
+		if (receiveThreads == null)
+			receiveThreads = new List<Thread> ();
+		
+		Thread receiveThread = new Thread(
+			new ThreadStart(() => ManageListening(listeners[port])));
+		receiveThread.IsBackground = true;
+		receiveThreads.Add (receiveThread);
+		receiveThread.Start();	
+
+		return port;
+	}
+
+	//Initalizes a socket to listen to an specific ip at as specific given port
 	public static void StartListener(int port, IPAddress ip)
 	{
-		print("UDPSend.StartListener()");
+//		Debug.Log("UDPSend.StartListener()");
 
 		if(listeners == null)
 			listeners = new Dictionary<int, UDPListener> ();
@@ -78,9 +101,10 @@ public class UDPReceiveManager : MonoBehaviour
 		receiveThread.Start();		
 	}
 
+	//Initalizes a socket to listen to any at as specific given port
 	public static void StartListener(int port)
 	{
-		print("UDPSend.StartListener()");
+		Debug.Log("UDPSend.StartListener()");
 
 		if(listeners == null)
 			listeners = new Dictionary<int, UDPListener> ();
@@ -104,6 +128,8 @@ public class UDPReceiveManager : MonoBehaviour
 	public static void ManageListening (UDPListener listener)
 	{
 		listener.receivedMsg = true;
+		Mutex mutex = new Mutex();
+		listener.mutex = mutex;
 		while (keepListening)
 		{	
 			if(listener.receivedMsg)
@@ -123,16 +149,23 @@ public class UDPReceiveManager : MonoBehaviour
 		UDPListener l = (UDPListener)(ar.AsyncState);
 		UdpClient c = (UdpClient)l.client;
 		IPEndPoint e = (IPEndPoint)l.endPoint;
+		Mutex mutex = (Mutex)l.mutex;
 
 		Byte[] receiveBytes = c.EndReceive(ar, ref e);
-		UDPReceiveManager.UDPMessageReceived (l);
-	
+		string msg = Encoding.ASCII.GetString(receiveBytes);
+
+		string[] msgParts = msg.Split('\t');
+
+		if(l.boundIP == "" || msgParts[0] == l.boundIP)
+			UDPReceiveManager.UDPMessageReceived (msg);
+
+		l.lastReceivedUDPPacket = msg;
+		l.allReceivedUDPPackets += l.lastReceivedUDPPacket+"\n";
+
 		mutex.WaitOne ();
 		l.receivedMsg = true;
 		mutex.ReleaseMutex ();
 
-		l.lastReceivedUDPPacket = Encoding.ASCII.GetString(receiveBytes);
-		l.allReceivedUDPPackets += l.lastReceivedUDPPacket+"\n";
 	}
 /*********************************************************************************/
 }

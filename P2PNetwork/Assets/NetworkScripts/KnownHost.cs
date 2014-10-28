@@ -6,9 +6,13 @@ public class KnownHost
 	public bool alive = true;
 	public float totalAliveCount = 15f;
 	public float aliveCount;
+
 	public string ip;
+	public int portToListen;
+	public bool directComunicationStablished = false;
+	public UDPSendChannel sendchannel;
+
 	public string name;
-	public UDPListener listener;
 
 	public KnownHost(string _ip, string _name)
 	{

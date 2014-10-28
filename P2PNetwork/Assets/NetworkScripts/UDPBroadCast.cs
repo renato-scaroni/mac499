@@ -105,12 +105,13 @@ public class UDPBroadCast : MonoBehaviour {
 		{
 			try
 			{
+				print ("Sending "+ message + " to "+nc.ip);
 				byte[] data = Encoding.UTF8.GetBytes(nc.ip+"\t"+message);
 				client.Send(data, data.Length, nc.endPoint);					
 			}
 			catch (Exception err)
 			{
-				print(err.ToString());
+				print("Sendstring ERROR: "+err.ToString());
 			}
 		}
 	}
@@ -118,7 +119,7 @@ public class UDPBroadCast : MonoBehaviour {
 	float delayTime = 1;
 	List<string> msgToSendDelay = new List<string>();
 	bool repeat = false;
-	public void SendStringWithDelay(string message, float delay, bool _repeat = false)
+	public void SendStringWithDelay(string message, float delay)
 	{
 		msgToSendDelay.Add (message);
 		delayTime = delay;
